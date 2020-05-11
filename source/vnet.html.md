@@ -73,7 +73,7 @@ $virtualNetwork = New-AzVirtualNetwork `
   -AddressPrefix 10.0.0.0/16
 ```
 
-Description: The Address Space that contains an array of IP address that can be used by Subnets 
+The Address Space that contains an array of IP address that can be used by Subnets 
 
 Name | Type | Required | Description
 ---- | ----- | ---- | ----
@@ -87,7 +87,7 @@ addressPrefixes | object | **yes** | A list of address blocks, in *string* forma
 }
 ```
 
-Description: Contains an array of DNS Servers available to Virtual Machines deployed in the virtual network 
+Contains an array of DNS Servers available to Virtual Machines deployed in the virtual network 
 
 Name | Type | Required | Description
 ---- | ----- | ---- | ----
@@ -99,7 +99,7 @@ dnsServers | array | **yes** | List of DNS Server IP addresses in *string* forma
 "enableDdosProtection": "true",
 ```
 
-Description: Enable DDoS protection for all protected resources in a virtual network.  Requires [DDoS protection Plan](https://docs.microsoft.com/en-us/azure/virtual-network/ddos-protection-overview) associated with the resource. 
+Enable DDoS protection for all protected resources in a virtual network.  Requires [DDoS protection Plan](https://docs.microsoft.com/en-us/azure/virtual-network/ddos-protection-overview) associated with the resource. 
 
 ## enableVmProtection
 
@@ -107,7 +107,7 @@ Description: Enable DDoS protection for all protected resources in a virtual net
 "enableVmProtection": "true"
 ```
 
-Description: Indicates if VM protection is enabled for all the subnets in the virtual network
+Indicates if VM protection is enabled for all the subnets in the virtual network
 
 ## ddosProtectionPlan
 
@@ -117,7 +117,7 @@ Description: Indicates if VM protection is enabled for all the subnets in the vi
     }
 ```
 
-Description: The DDoS protection plan associated with the virtual network.
+The DDoS protection plan associated with the virtual network.
 
 Name | Type | Required | Description
 ---- | ----- | ---- | ----
@@ -131,7 +131,7 @@ id | string | **yes** | Resource ID
     }
 ```
 
-Description: Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET
+Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET
 
 Name | Type | Required | Description
 ---- | ----- | ---- | ----
@@ -145,7 +145,7 @@ virtualNetworkCommunity | string | **yes** | The BGP community associated with t
     }
 ```
 
-Description: Array of IpAllocation which reference this VNET.
+Array of IpAllocation which reference this VNET.
 
 Name | Type | Required | Description
 ---- | ----- | ---- | ----
