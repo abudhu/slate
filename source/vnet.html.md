@@ -109,6 +109,12 @@ Attach an existing Subnet, or create subnet(s) within the virtual network.
 
 You can also create a seperate Subnet Resource if you do not want to embed the subnet within the virtual network object block.  Please see the [Subnet ARM Resource Documentation](http://51.143.17.183:4567/subnet.html).
 
+Name | Type | Required | Description 
+---- | ----- | ---- | ---- |
+id | array | no | Resource ID of an existing Subnet 
+name | string | no | Name of the subnet 
+properties | object | no | [Properties](http://51.143.17.183:4567/subnet.html#properties) of the Subnet ARM Resource 
+
 <aside class="notice">
 <ul>
   <li>
@@ -119,12 +125,6 @@ You can also create a seperate Subnet Resource if you do not want to embed the s
   </li>
 </ul>
 </aside>
-
-Name | Type | Required | Description 
----- | ----- | ---- | ---- |
-id | array | no | Resource ID of an existing Subnet 
-name | string | no | Name of the subnet 
-properties | object | no | [Properties](http://51.143.17.183:4567/subnet.html#properties) of the Subnet ARM Resource 
 
 ## enableDdosProtection
 
