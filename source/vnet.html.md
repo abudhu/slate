@@ -47,11 +47,6 @@ tags | object | no | Resource Tags
 
 # Properties
 
-```json
-"addressSpace": { } 
-"dhcpOptions": { }
-```
-
 Name | Type | Required 
 ---- | ----- | ----  
 [addressSpace](#addressSpace) | object | **yes** 
