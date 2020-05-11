@@ -10,14 +10,11 @@ search: true
 # Introduction
 
 ```shell
-                          
-                          
-  __ _ _____   _ _ __ ___ 
- / _` |_  / | | | '__/ _ \
-| (_| |/ /| |_| | | |  __/
- \__,_/___|\__,_|_|  \___|
-                          
-                          
+  __ _
+ / _` |
+| (_| |
+ \__,_/
+          
 ```
 
 Welcome to the Better Azure Docs.  This site exists to gives more accurate documentation and clear examples for creating ARM templates in Azure.
