@@ -65,6 +65,12 @@ Name | Type | Required
 
 The subnet address to be created within the Vnet CIDR block
 
+<aside class="notice">
+Cannot be used when <em>addressPrefixes</em> is used
+</aside>
+
+`Cannot be used when addressPrefixes is used`
+
 ## addressPrefixes
 ```json
 "addressPrefixes": ["10.0.1.0/24","10.0.2.0/24"]
@@ -72,6 +78,11 @@ The subnet address to be created within the Vnet CIDR block
 
 A list of subnet address to be created within gthe Vnet CIDR block
 
+<aside class="notice">
+Cannot be used when <em>addressPrefix</em> is used
+</aside>
+
+`Cannot be used when addressPrefix is used`
 
 # Issues
 

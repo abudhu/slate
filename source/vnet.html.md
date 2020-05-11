@@ -105,10 +105,10 @@ dnsServers | array | **yes** | List of DNS Server IP addresses in *string* forma
 ]
 ```
 
-Attach an existing Subnet, or create a subnets within the VNet.
+Attach an existing Subnet, or create subnet(s) within the virtual network.
 
 <aside class="notice">
-You can also create a seperate Subnet Resource if you do not want to embed the Subnet within the VNet Code Block.  Please see the <a href="http://51.143.17.183:4567/subnet.html">Subnet ARM Resource Documentation</a>.
+You can also create a seperate Subnet Resource if you do not want to embed the subnet within the virtual network code block.  Please see the <a href="http://51.143.17.183:4567/subnet.html">Subnet ARM Resource Documentation</a>.
 </aside>
 
 Name | Type | Required | Description | Caveats
