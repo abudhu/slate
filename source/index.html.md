@@ -9,13 +9,19 @@ search: true
 
 # Introduction
 
-Welcome to the Better Azure Docs.  This site exists to gives more accurate documentation and clear examples for creating ARM templates in Azure.
-
->  __ _ _____   _ _ __ ___ 
+```shell
+                          
+                          
+  __ _ _____   _ _ __ ___ 
  / _` |_  / | | | '__/ _ \
 | (_| |/ /| |_| | | |  __/
  \__,_/___|\__,_|_|  \___|
                           
+                          
+```
+
+Welcome to the Better Azure Docs.  This site exists to gives more accurate documentation and clear examples for creating ARM templates in Azure.
+
 
 # Resources
 
