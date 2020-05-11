@@ -25,7 +25,7 @@ Specifies a VNET Resource with a IPv4 CIDR block.  Fore more information on Azur
             "apiVersion": "2020-04-01",
             "location": "West US 2",
             "properties": { 
-                //PLEASE SEE Properties Section for Required Values
+                //Please see Properties section for required values
             }
         }
     ],
@@ -95,16 +95,26 @@ dnsServers | array | **yes** | List of DNS Server IP addresses in *string* forma
 
 ## subnets
 
+```json
+"subnets": [
+    "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets','myPreExistingSubnet')]",
+    "name": "myNewSubnet",
+    "properties": {
+      //Please see Subnet ARM resource documentation for properties
+    }
+]
+```
+
 Attach an existing Subnet, or create a subnets within the VNet.
 
 <aside class="notice">
 You can also create a seperate Subnet Resource if you do not want to embed the Subnet within the VNet Code Block.  Please see the <a href="http://51.143.17.183:4567/subnet.html">Subnet ARM Resource Documentation<a>.
 
-Name | Type | Required | Description
----- | ----- | ---- | ----
-id | array | no | Resource ID of an existing Subnet
-name | string | no | Name of the subnet
-properties | object | [Properties](http://51.143.17.183:4567/subnet.html#properties) of the Subnet ARM Resource
+Name | Type | Required | Description | Caveats
+---- | ----- | ---- | ---- | -----
+id | array | no | Resource ID of an existing Subnet | Cannot be used when *name* and *properties* are defined
+name | string | no | Name of the subnet | Cannot be used when *id* is defined
+properties | object | [Properties](http://51.143.17.183:4567/subnet.html#properties) of the Subnet ARM Resource | Cannot be used when *id* is defined
 
 ## enableDdosProtection
 
