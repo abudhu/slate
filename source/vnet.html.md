@@ -12,7 +12,7 @@ search: true
 
 # VNET Resource
 
-Specified a VNET Resource with a IPv4 CIDR block.  Fore more information on Azure Virtual Networks see [What is Azure Virtual Network](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview)
+Specifies a VNET Resource with a IPv4 CIDR block.  Fore more information on Azure Virtual Networks see [What is Azure Virtual Network](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview)
 
 # Declare Resource
 
@@ -20,7 +20,7 @@ Specified a VNET Resource with a IPv4 CIDR block.  Fore more information on Azur
 {
     "resources": [  
       {
-            "name": "Vnet",
+            "name": "myVirtualNetwork",
             "type": "Microsoft.Network/virtualNetworks",
             "apiVersion": "2020-04-01",
             "location": "West US 2",
@@ -39,8 +39,8 @@ name | string | **yes** | Name of the VNET Resource
 type | enum | **yes** | Microsoft.Network/virtualNetworks
 apiVersion | enum | **yes** | The apiVersion that will be invoked for this resource.  Ex: 2020-04-01
 location | string | **yes** | The Azure Region to deloy this resource. 
-[properties](#Properties) | object | **yes** | Defining properties for the VNET Resource
-[resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/child-resource-name-type) | array | no | Attach to an existing resource that this is dependent on.
+[properties](#properties) | object | **yes** | Defining properties for the VNET Resource
+[resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/child-resource-name-type) | array | no | Any dependent child resources can be embedded in this section
 tags | object | no | Resource Tags
 
 # Properties
@@ -49,7 +49,7 @@ Name | Type | Required
 ---- | ----- | ----  
 [addressSpace](#addressSpace) | object | **yes** 
 [dhcpOptions](#dhcpOptions) | object | no 
-[subnets] (#subnet) | array | no 
+[subnets](#subnets) | array | no 
 [virtualNetworkPeerings](#virtualNetworkPeerings) | array | no 
 [enableDdosProtection](#enableDdosProtection) | boolean | no 
 [enableVmProtection](#enableVmProtection) | boolean | no
@@ -69,7 +69,7 @@ Name | Type | Required
 $virtualNetwork = New-AzVirtualNetwork `
   -ResourceGroupName myResourceGroup `
   -Location WestUS2 `
-  -Name Vnet `
+  -Name myVirtualNetwork `
   -AddressPrefix 10.0.0.0/16
 ```
 
@@ -92,6 +92,12 @@ Contains an array of DNS Servers available to Virtual Machines deployed in the v
 Name | Type | Required | Description
 ---- | ----- | ---- | ----
 dnsServers | array | **yes** | List of DNS Server IP addresses in *string* format
+
+## subnets
+
+> While you can embed a Subnet directly within the creation of a VNet, we recommend against that practice.  Rather you should create the subnet as a seperate resource.  For more information about this please see [Why we recommend against Microsoft's embedding of child resources](https://blankwhypage/)
+
+[Creating Subnet Object](http://51.143.17.183:4567/subnet.html)
 
 ## enableDdosProtection
 
