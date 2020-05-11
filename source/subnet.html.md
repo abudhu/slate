@@ -70,6 +70,7 @@ Cannot be used when <em><a href="http://51.143.17.183:4567/subnet.html#addresspr
 </aside>
 
 ## addressPrefixes
+
 ```json
 "addressPrefixes": ["10.0.1.0/24","10.0.2.0/24"]
 ```
@@ -77,7 +78,7 @@ Cannot be used when <em><a href="http://51.143.17.183:4567/subnet.html#addresspr
 A list of subnet address to be created within gthe Vnet CIDR block
 
 <aside class="notice">
-Cannot be used when <a href="http://51.143.17.183:4567/subnet.html#addressprefix"><em>addressPrefix</em><a/> is used
+Cannot be used when <a href="http://51.143.17.183:4567/subnet.html#addressprefix"><em>addressPrefix</em></a> is used
 </aside>
 
 ### Issues
