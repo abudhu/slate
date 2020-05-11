@@ -95,11 +95,16 @@ dnsServers | array | **yes** | List of DNS Server IP addresses in *string* forma
 
 ## subnets
 
-<aside class="notice">
-While you can embed a Subnet directly within the creation of a VNet, we recommend against that practice.  Rather you should create the subnet as a seperate resource.  For more information about this please see <a href="https://blankwhypage/">Why we recommend against Microsoft's embedding of child resources</a>
-</aside>
+Attach an existing Subnet, or create a subnets within the VNet.
 
-[Creating Subnet Object](http://51.143.17.183:4567/subnet.html)
+<aside class="notice">
+You can also create a seperate Subnet Resource if you do not want to embed the Subnet within the VNet Code Block.  Please see the <a href="http://51.143.17.183:4567/subnet.html">Subnet ARM Resource Documentation<a>.
+
+Name | Type | Required | Description
+---- | ----- | ---- | ----
+id | array | no | Resource ID of an existing Subnet
+name | string | no | Name of the subnet
+properties | object | [Properties](http://51.143.17.183:4567/subnet.html#properties) of the Subnet ARM Resource
 
 ## enableDdosProtection
 

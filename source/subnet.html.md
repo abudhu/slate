@@ -77,3 +77,8 @@ A list of subnet address to be created within gthe Vnet CIDR block
 
 ## addressPrefixes 
 {"code":"DeploymentFailed","message":"At least one resource deployment operation failed. Please list deployment operations for details. Please see https://aka.ms/DeployOperations for usage details.","details":[{"code":"BadRequest","message":"{\r\n \"error\": {\r\n \"code\": \"SubscriptionNotRegisteredForFeature\",\r\n \"message\": \"Subscription 66d5997f-8792-477b-9e2a-a69d08275ddd is not registered for feature Microsoft.Network/AllowMultipleAddressPrefixesOnSubnet required to carry out the requested operation.\",\r\n \"details\": []\r\n }\r\n}"}]}
+
+
+Network Security Grou:
+
+Ref ID is needed
