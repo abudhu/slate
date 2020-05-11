@@ -80,7 +80,7 @@ A list of subnet address to be created within gthe Vnet CIDR block
 Cannot be used when <a href="http://51.143.17.183:4567/subnet.html#addressprefix"><em>addressPrefix</em><a/> is used
 </aside>
 
-<aside class="This property does have known issues!"></aside>
+<aside class="warning">This property does have known issues!</aside>
 
 Issue | Description
 --- | ----
