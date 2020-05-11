@@ -107,15 +107,24 @@ dnsServers | array | **yes** | List of DNS Server IP addresses in *string* forma
 
 Attach an existing Subnet, or create subnet(s) within the virtual network.
 
+You can also create a seperate Subnet Resource if you do not want to embed the subnet within the virtual network object block.  Please see the [Subnet ARM Resource Documentation](http://51.143.17.183:4567/subnet.html).
+
 <aside class="notice">
-You can also create a seperate Subnet Resource if you do not want to embed the subnet within the virtual network code block.  Please see the <a href="http://51.143.17.183:4567/subnet.html">Subnet ARM Resource Documentation</a>.
+<ul>
+  </li>
+  If you are connecting an existing subnet then the <b>id</b> is required, and you cannot use the <b>name</b> or <b>properties</b> values.
+  </li>
+  <li>
+  If you are creating a new subnet <b>name</b> and <b>properties</b> are required, and you cannot use the <b>id</b> value.
+  </li>
+</ul>
 </aside>
 
-Name | Type | Required | Description | Caveats
----- | ----- | ---- | ---- | -----
-id | array | no - see caveats| Resource ID of an existing Subnet | *id* is required if you are attaching an preexisting subnet. Cannot be used when *name* and *properties* are defined
-name | string | no - see caveats| Name of the subnet | *name* is required when creating a new inline subnet. Cannot be used when *id* is defined
-properties | object | no - see caveats| [Properties](http://51.143.17.183:4567/subnet.html#properties) of the Subnet ARM Resource | *properties* is required when creating a new inline subnet. Cannot be used when *id* is defined
+Name | Type | Required | Description 
+---- | ----- | ---- | ---- |
+id | array | no | Resource ID of an existing Subnet 
+name | string | no | Name of the subnet 
+properties | object | no | [Properties](http://51.143.17.183:4567/subnet.html#properties) of the Subnet ARM Resource 
 
 ## enableDdosProtection
 
