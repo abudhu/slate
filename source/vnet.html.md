@@ -1,0 +1,95 @@
+---
+title: VNET ARM Resource
+
+language_tabs: # must be one of https://git.io/vQNgJ
+  - json
+  - powershell
+
+toc_footers:
+
+search: true
+---
+
+# VNET Resource
+
+Specified a VNET Resource with a IPv4 CIDR block.  Fore more information on Azure Virtual Networks see [What is Azure Virtual Network](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview)
+
+# Declare Resource
+
+## Objects
+
+```json
+{
+    "resources": [  
+        {
+            "name": "Vnet",
+            "type": "Microsoft.Network/virtualNetworks",
+            "apiVersion": "2020-04-01",
+            "location": "West US 2",
+            "properties": { 
+                //PLEASE SEE Properties Section for Required Values
+            }
+        }
+    ],
+  }
+```
+
+
+Name | Type | Required | Description
+--------- | ------- |  ------- | -----------
+name | string | **yes** | Name of the VNET Resource
+type | enum | **yes** | Microsoft.Network/virtualNetworks
+apiVersion | enum | **yes** | The apiVersion that will be invoked for this resource.  Ex: 2020-04-01
+location | string | **yes** | The Azure Region to deloy this resource. 
+properties | object | **yes** | Defining properties for the VNET Resource
+resource | array | no | Attach any existing virtualNetworkPeerings or Subnets
+tags | object | no | Resource Tags
+
+# Properties
+
+## addressSpace
+
+```json
+"addressSpace": { } 
+"dhcpOptions": { }
+```
+
+Name | Type | Required | Description | Contains
+---- | ----- | ---- | ---- | ----
+addressSpace | object | **yes** | The Address Space that contains an array of IP address that can be used by Subnets | [addressPrefixes](#addressPrefixes)
+dhcpOptions | object | no | dhcpOptions contains an array of DNS Servers available to Virtual Machines deployed in the virtual network | [dnsServers](#dnsServers)
+
+### addressPrefixes
+
+
+```json
+"addressSpace": {
+    "addressPrefixes": ["10.0.0.0/16"]
+}
+```
+
+```powershell
+$virtualNetwork = New-AzVirtualNetwork `
+  -ResourceGroupName myResourceGroup `
+  -Location WestUS2 `
+  -Name Vnet `
+  -AddressPrefix 10.0.0.0/16
+```
+
+Name | Type | Required | Description
+---- | ----- | ---- | ----
+addressPrefixes | object | **yes** | A list of address blocks, in *string* format reserved for this virtual network in CIDR notation
+
+### dnsServers
+
+```json
+"dhcpOptions": {
+    "dnsServers": ["1.1.1.1", "2.2.2.2"]
+}
+```
+
+Name | Type | Required | Description
+---- | ----- | ---- | ----
+dnsServers | array | **yes** | List of DNS Server IP addresses in *string* format
+
+# Examples
