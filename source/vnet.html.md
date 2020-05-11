@@ -111,7 +111,7 @@ You can also create a seperate Subnet Resource if you do not want to embed the s
 
 <aside class="notice">
 <ul>
-  </li>
+  <li>
   If you are connecting an existing subnet then the <b>id</b> is required, and you cannot use the <b>name</b> or <b>properties</b> values.
   </li>
   <li>
