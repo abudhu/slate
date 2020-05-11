@@ -115,7 +115,7 @@ Name | Type | Required | Description | Caveats
 ---- | ----- | ---- | ---- | -----
 id | array | no | Resource ID of an existing Subnet | Cannot be used when *name* and *properties* are defined
 name | string | no | Name of the subnet | Cannot be used when *id* is defined
-properties | object | [Properties](http://51.143.17.183:4567/subnet.html#properties) of the Subnet ARM Resource | Cannot be used when *id* is defined
+properties | object | no | [Properties](http://51.143.17.183:4567/subnet.html#properties) of the Subnet ARM Resource | Cannot be used when *id* is defined
 
 ## enableDdosProtection
 
