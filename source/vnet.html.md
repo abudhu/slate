@@ -40,7 +40,7 @@ type | enum | **yes** | Microsoft.Network/virtualNetworks
 apiVersion | enum | **yes** | The apiVersion that will be invoked for this resource.  Ex: 2020-04-01
 location | string | **yes** | The Azure Region to deloy this resource. 
 [properties](#Properties) | object | **yes** | Defining properties for the VNET Resource
-resource | array | no | Attach any existing virtualNetworkPeerings or Subnets
+[resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/child-resource-name-type) | array | no | Attach to an existing resource that this is dependent on.
 tags | object | no | Resource Tags
 
 # Properties
