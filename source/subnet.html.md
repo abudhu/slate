@@ -66,10 +66,8 @@ Name | Type | Required
 The subnet address to be created within the Vnet CIDR block
 
 <aside class="notice">
-Cannot be used when <em>addressPrefixes</em> is used
+Cannot be used when <em><a href="http://51.143.17.183:4567/subnet.html#addressprefixes">addressPrefixes</a></em> is used
 </aside>
-
-`Cannot be used when addressPrefixes is used`
 
 ## addressPrefixes
 ```json
@@ -79,15 +77,15 @@ Cannot be used when <em>addressPrefixes</em> is used
 A list of subnet address to be created within gthe Vnet CIDR block
 
 <aside class="notice">
-Cannot be used when <em>addressPrefix</em> is used
+Cannot be used when <a href="http://51.143.17.183:4567/subnet.html#addressprefix"><em>addressPrefix</em><a/> is used
 </aside>
 
-`Cannot be used when addressPrefix is used`
+<aside class="This property does have known issues!">
 
-# Issues
+Issue | Description
+--- | ----
+SubscriptionNotRegisteredForFeature | Your subscription may not be registered for the following feature: Microsoft.Network/AllowMultipleAddressPrefixesOnSubnet 
 
-## addressPrefixes 
-{"code":"DeploymentFailed","message":"At least one resource deployment operation failed. Please list deployment operations for details. Please see https://aka.ms/DeployOperations for usage details.","details":[{"code":"BadRequest","message":"{\r\n \"error\": {\r\n \"code\": \"SubscriptionNotRegisteredForFeature\",\r\n \"message\": \"Subscription 66d5997f-8792-477b-9e2a-a69d08275ddd is not registered for feature Microsoft.Network/AllowMultipleAddressPrefixesOnSubnet required to carry out the requested operation.\",\r\n \"details\": []\r\n }\r\n}"}]}
 
 
 Network Security Grou:
