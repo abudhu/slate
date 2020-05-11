@@ -16,8 +16,6 @@ Specified a VNET Resource with a IPv4 CIDR block.  Fore more information on Azur
 
 # Declare Resource
 
-## Objects
-
 ```json
 {
     "resources": [  
@@ -41,7 +39,7 @@ name | string | **yes** | Name of the VNET Resource
 type | enum | **yes** | Microsoft.Network/virtualNetworks
 apiVersion | enum | **yes** | The apiVersion that will be invoked for this resource.  Ex: 2020-04-01
 location | string | **yes** | The Azure Region to deloy this resource. 
-properties | object | **yes** | Defining properties for the VNET Resource
+[properties](#Properties) | object | **yes** | Defining properties for the VNET Resource
 resource | array | no | Attach any existing virtualNetworkPeerings or Subnets
 tags | object | no | Resource Tags
 
