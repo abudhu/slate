@@ -113,9 +113,9 @@ You can also create a seperate Subnet Resource if you do not want to embed the S
 
 Name | Type | Required | Description | Caveats
 ---- | ----- | ---- | ---- | -----
-id | array | no | Resource ID of an existing Subnet | Cannot be used when *name* and *properties* are defined
-name | string | no | Name of the subnet | Cannot be used when *id* is defined
-properties | object | no | [Properties](http://51.143.17.183:4567/subnet.html#properties) of the Subnet ARM Resource | Cannot be used when *id* is defined
+id | array | no - see caveats| Resource ID of an existing Subnet | *id* is required if you are attaching an preexisting subnet. Cannot be used when *name* and *properties* are defined
+name | string | no - see caveats| Name of the subnet | *name* is required when creating a new inline subnet. Cannot be used when *id* is defined
+properties | object | no - see caveats| [Properties](http://51.143.17.183:4567/subnet.html#properties) of the Subnet ARM Resource | *properties* is required when creating a new inline subnet. Cannot be used when *id* is defined
 
 ## enableDdosProtection
 
