@@ -109,6 +109,7 @@ Attach an existing Subnet, or create a subnets within the VNet.
 
 <aside class="notice">
 You can also create a seperate Subnet Resource if you do not want to embed the Subnet within the VNet Code Block.  Please see the <a href="http://51.143.17.183:4567/subnet.html">Subnet ARM Resource Documentation<a>.
+</aside>
 
 Name | Type | Required | Description | Caveats
 ---- | ----- | ---- | ---- | -----
