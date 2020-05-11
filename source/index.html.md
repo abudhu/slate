@@ -9,12 +9,12 @@ search: true
 
 # Introduction
 
-```shell
-  __ _
- / _` |
-| (_| |
- \__,_/
-          
+```json
+{
+  "welcome_to": "Better Azure Docs!",
+  "powered_by": "You! The community!",
+  "last_update": 05-11-2020
+}
 ```
 
 Welcome to the Better Azure Docs.  This site exists to gives more accurate documentation and clear examples for creating ARM templates in Azure.
