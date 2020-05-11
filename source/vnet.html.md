@@ -96,7 +96,7 @@ dnsServers | array | **yes** | List of DNS Server IP addresses in *string* forma
 ## subnets
 
 <aside class="notice">
-While you can embed a Subnet directly within the creation of a VNet, we recommend against that practice.  Rather you should create the subnet as a seperate resource.  For more information about this please see [Why we recommend against Microsoft's embedding of child resources](https://blankwhypage/)
+While you can embed a Subnet directly within the creation of a VNet, we recommend against that practice.  Rather you should create the subnet as a seperate resource.  For more information about this please see <a href="https://blankwhypage/">Why we recommend against Microsoft's embedding of child resources</a>
 </aside>
 
 [Creating Subnet Object](http://51.143.17.183:4567/subnet.html)
