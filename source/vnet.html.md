@@ -21,7 +21,7 @@ Specified a VNET Resource with a IPv4 CIDR block.  Fore more information on Azur
 ```json
 {
     "resources": [  
-        {
+      {
             "name": "Vnet",
             "type": "Microsoft.Network/virtualNetworks",
             "apiVersion": "2020-04-01",
@@ -47,20 +47,24 @@ tags | object | no | Resource Tags
 
 # Properties
 
-## addressSpace
-
 ```json
 "addressSpace": { } 
 "dhcpOptions": { }
 ```
 
-Name | Type | Required | Description | Contains
----- | ----- | ---- | ---- | ----
-addressSpace | object | **yes** | The Address Space that contains an array of IP address that can be used by Subnets | [addressPrefixes](#addressPrefixes)
-dhcpOptions | object | no | dhcpOptions contains an array of DNS Servers available to Virtual Machines deployed in the virtual network | [dnsServers](#dnsServers)
+Name | Type | Required 
+---- | ----- | ----  
+[addressSpace](#addressSpace) | object | **yes** 
+[dhcpOptions](#dhcpOptions) | object | no 
+[subnets] (#subnet) | array | no 
+[virtualNetworkPeerings](#virtualNetworkPeerings) | array | no 
+[enableDdosProtection](#enableDdosProtection) | boolean | no 
+[enableVmProtection](#enableVmProtection) | boolean | no
+[ddosProtectionPlan](#ddosProtectionPlan) | object | no
+[bgpCommunities](#bgpCommunities) | object | no
+[ipAllocations](#ipAllocations) | array | no
 
-### addressPrefixes
-
+## addressSpace
 
 ```json
 "addressSpace": {
@@ -76,11 +80,13 @@ $virtualNetwork = New-AzVirtualNetwork `
   -AddressPrefix 10.0.0.0/16
 ```
 
+Description: The Address Space that contains an array of IP address that can be used by Subnets 
+
 Name | Type | Required | Description
 ---- | ----- | ---- | ----
 addressPrefixes | object | **yes** | A list of address blocks, in *string* format reserved for this virtual network in CIDR notation
 
-### dnsServers
+## dhcpOptions
 
 ```json
 "dhcpOptions": {
@@ -88,8 +94,66 @@ addressPrefixes | object | **yes** | A list of address blocks, in *string* forma
 }
 ```
 
+Description: Contains an array of DNS Servers available to Virtual Machines deployed in the virtual network 
+
 Name | Type | Required | Description
 ---- | ----- | ---- | ----
 dnsServers | array | **yes** | List of DNS Server IP addresses in *string* format
 
-# Examples
+## enableDdosProtection
+
+```json
+"enableDdosProtection": "true",
+```
+
+Description: Enable DDoS protection for all protected resources in a virtual network.  Requires [DDoS protection Plan](https://docs.microsoft.com/en-us/azure/virtual-network/ddos-protection-overview) associated with the resource. 
+
+## enableVmProtection
+
+```json
+"enableVmProtection": "true"
+```
+
+Description: Indicates if VM protection is enabled for all the subnets in the virtual network
+
+## ddosProtectionPlan
+
+```json
+"ddosProtectionPlan": {
+      "id": "00000-0000-0000-000"
+    }
+```
+
+Description: The DDoS protection plan associated with the virtual network.
+
+Name | Type | Required | Description
+---- | ----- | ---- | ----
+id | string | **yes** | Resource ID
+
+## bgpCommunities
+
+```json
+"bgpCommunities": {
+      "virtualNetworkCommunity": "11111-1111-111-111"
+    }
+```
+
+Description: Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET
+
+Name | Type | Required | Description
+---- | ----- | ---- | ----
+virtualNetworkCommunity | string | **yes** | The BGP community associated with the virtual network.
+
+## ipAllocations
+
+```json
+"ipAllocations": {
+      "id": "00000-0000-0000-000"
+    }
+```
+
+Description: Array of IpAllocation which reference this VNET.
+
+Name | Type | Required | Description
+---- | ----- | ---- | ----
+id | string | **yes** | Resource ID
